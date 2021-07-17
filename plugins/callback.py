@@ -1,6 +1,6 @@
 #MIT License
 
-#Copyright (c) 2021 SUBIN
+#Copyright (c) 2021 harsh-telegram
 
 #Permission is hereby granted, free of charge, to any person obtaining a copy
 #of this software and associated documentation files (the "Software"), to deal
@@ -66,7 +66,7 @@ You can also use /dplay <song name> to play a song from Deezer.</b>
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.from_user.id not in Config.ADMINS and query.data != "help":
         await query.answer(
-            "Who the hell you are",
+            "Not an authorized user.\n Contact owner: @i_izharsh",
             show_alert=True
             )
         return
@@ -171,12 +171,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="help":
         buttons = [
             [
-                InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-                InlineKeyboardButton('🤖 Other Bots', url='https://t.me/subin_works/122'),
-            ],
-            [
-                InlineKeyboardButton('👨🏼‍💻 Developer', url='https://t.me/subinps'),
-                InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/MusicPlayer'),
+                InlineKeyboardButton('👨🏼‍💻 Developer', url='https://t.me/i_izharsh'),
+                InlineKeyboardButton('🧩 Source', url='https://github.com/harsh-telegram/MusicPlayer'),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
